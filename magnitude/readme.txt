@@ -3,7 +3,7 @@
 Contributors: AF themes
 Requires PHP: 5.6
 Tested up to: 6.6
-Stable tag: 2.2.0
+Stable tag: 3.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: news, blog, entertainment, one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-menu, featured-images, full-width-template, custom-header, translation-ready, rtl-language-support, theme-options, threaded-comments
@@ -37,6 +37,22 @@ Magnitude is a clean, elegant WordPress theme, ideal for blogging and magazine o
 Magnitude includes support for Infinite Scroll in Jetpack.
 
 == Change log ==
+= 3.0.0 - Oct 25 2024 =
+* New - Import Starter Site Dashboard
+* New - Import Gutenberg Patterns Dashboard
+* New - Import Elementor Kits Dashboard
+* New - Customize Menu
+* New - AF themes Dashboard Menu
+* Update - Scripts improvements
+* Update - Block Style improvement
+* Fixed - Some styling glitch
+
+= 2.3.0 - Sep 11 2024 =
+* Update - Theme Banners improvements
+* Update - Theme Menus improvements
+* Update - Block Style improvement
+* Fixed - Some styling glitch
+
 = 2.1.3 - Mar 22 2024 =
 * Update - Icon improvement
 * Update - Block Style improvement

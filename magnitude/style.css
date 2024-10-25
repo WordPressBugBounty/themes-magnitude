@@ -4,7 +4,7 @@ Theme URI: https://afthemes.com/products/magnitude/
 Author: AF themes
 Author URI: https://www.afthemes.com/
 Description: Magnitude is a clean, elegant WordPress theme, ideal for blogging and magazine online. You can design your website as you like and preview the modifications live using live customizer options and custom widgets. It is compatible with the Gutenberg and RTL along with WooCommerce plugin which helps you to integrate an online business with our newspaper template. It also contains many helpful elements that require an amazing news portal to be built, the theme is ideal for blogging and great for news, newspaper, magazine, publication or review site. The theme is well-optimized that helps to rank your website in the top of search engines and users will get an outstanding support from the team if there will be any difficulties while using the theme. There are number of demos available in this theme so choose the one you like and start to build a website. See our demos: https://demos.afthemes.com/magnitude/, https://demos.afthemes.com/magnitude/newsportal/, https://demos.afthemes.com/magnitude/sport/
-Version: 2.2.0
+Version: 3.0.0
 Requires PHP: 5.6
 Tested up to: 6.6
 License: GNU General Public License v2 or later
@@ -329,11 +329,13 @@ optgroup,
 textarea {
     border: 1px solid #dcdcdc;
 }
+.wp-block-search__label,
 h1, h2, h3, h4, h5, h6 {
     clear: both;
     color: #000000;
     line-height: 1.3;
 }
+.wp-block-search__label,
 .site-title,
 h1,
 h2,
@@ -1348,6 +1350,7 @@ input[type=search].wp-block-search__input {
 /* search */
 
 /*============-------------for all navigations----------=============*/
+.main-navigation #primary-menu > ul:not(.menu-mobile) > li,
 .main-navigation .menu-desktop  > li ,
 .main-navigation .menu-desktop > ul > li {
     position: relative;
@@ -1728,8 +1731,6 @@ body.aft-default-mode .ham.exit{background-color:transparent;}
     margin-right: 5px;
 }
 
-
-
 @media only screen and (max-width: 640px){
     .exclusive-posts .exclusive-now {
         width: 100%;
@@ -1738,7 +1739,6 @@ body.aft-default-mode .ham.exit{background-color:transparent;}
         clear: both;
     }
 }
-
 
 .alert-spinner {
     width: 20px;
@@ -2301,12 +2301,9 @@ body:not(.home) .magnitude-header.header-layout-compressed-centered .full-width.
     }
 }
 @media (min-width: 992px){
-
-    
     .header-layout-compressed:not(.header-layout-compressed-centered) .main-navigation .menu-desktop > ul > li{
         padding-right: 15px;
     }
-
     .header-layout-compressed:not(.header-layout-compressed-centered) .main-navigation > .menu > .menu-desktop,
     .header-layout-compressed:not(.header-layout-compressed-centered) ul#primary-menu{
         display: flex;
@@ -2637,6 +2634,7 @@ body:not(.single) .read-single span.min-read{
     opacity: 0.75;
 }
 /*widget title===============*/
+.wp-block-search__label,
 .wp-block-group .wp-block-heading,
 .header-after1 ,
 .widget-title{
@@ -2645,6 +2643,7 @@ body:not(.single) .read-single span.min-read{
     margin-top: 20px;
     font-size: 22px;
 }
+.wp-block-search__label:after,
 .wp-block-group .wp-block-heading:after,
 .header-after1 span:after ,
 .widget-title span:after{
@@ -2658,22 +2657,26 @@ body:not(.single) .read-single span.min-read{
     margin: 0 10px;
     transform: translateY(-50%);
 }
+body.widget-title-border-right .wp-block-search__label::after,
 body.widget-title-border-right .wp-block-group .wp-block-heading:after,
 body.widget-title-border-right .header-after1 span:after,
 body.widget-title-border-right .widget-title span:after{
     transform: translateY(-50%);
 }
+body.widget-title-border-left .wp-block-search__label,
 body.widget-title-border-left .wp-block-group .wp-block-heading,
 body.widget-title-border-left .header-after1 span,
 body.widget-title-border-left .widget-title span{
     padding-left: 40px;
 }
+body.widget-title-border-left .wp-block-search__label:after,
 body.widget-title-border-left .wp-block-group .wp-block-heading:after,
 body.widget-title-border-left .header-after1 span:after,
 body.widget-title-border-left .widget-title span:after {
     left: 0;
     margin-left: 0;
 }
+body.widget-title-border-bottom .wp-block-search__label,
 body.widget-title-border-bottom .wp-block-group .wp-block-heading,
 body.widget-title-border-bottom .header-after1,
 body.widget-title-border-bottom .widget-title{
@@ -2681,6 +2684,7 @@ body.widget-title-border-bottom .widget-title{
     margin-bottom: 10px;
     font-size: 22px;
 }
+body.widget-title-border-bottom .wp-block-search__label:after,
 body.widget-title-border-bottom .wp-block-group .wp-block-heading:after,
 body.widget-title-border-bottom .header-after1 span:after,
 body.widget-title-border-bottom .widget-title span:after{
@@ -2690,6 +2694,7 @@ body.widget-title-border-bottom .widget-title span:after{
     margin: 0;
     transform: translateY(0%);
 }
+body.widget-title-border-none .wp-block-search__label:after,
 body.widget-title-border-none .wp-block-group .wp-block-heading:after,
 body.widget-title-border-none .header-after1 span:after,
 body.widget-title-border-none .widget-title span:after{display: none;}
@@ -3170,6 +3175,9 @@ display: flex;
 .grid-layout-default .first-grid-item-warpper{
     width: 41.67%;
     float: left;
+}
+.grid-layout-default .af-banner-slider {
+    max-height: 440px;
 }
 .grid-layout-default .first-grid-item-warpper .common-grid{width: 100%;}
 .grid-layout-default .first-grid-item-warpper .common-grid .slick-slide{height: 440px;}
@@ -5514,7 +5522,7 @@ div.wp-block-categories.wp-block-categories-dropdown label {
 .widget_nav_menu li a,
 .widget_recent_entries li a {
     display: table;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-size: 17px;
     position: relative;
     width: 100%;
@@ -5534,7 +5542,7 @@ div.wp-block-categories.wp-block-categories-dropdown label {
     padding-bottom: 0;
 }
 
-.wp-block-categories li,
+/* .wp-block-categories li, */
 .wp-block-page-list li a,
 .wp-block-latest-posts li a,
 .wp-block-archives li a,
@@ -5577,6 +5585,18 @@ div.wp-block-categories.wp-block-categories-dropdown label {
 #content .widget_nav_menu li a:hover,
 #content .widget_recent_entries li a:hover {
     color: #bb1919;
+}
+
+body.aft-dark-mode .is-style-outline a.wp-block-button__link:not(.has-text-color), 
+body.aft-default-mode .is-style-outline a.wp-block-button__link:not(.has-text-color){
+    border-color:#bb1919 ;
+    color: #bb1919;
+}
+body.aft-dark-mode .is-style-fill a.wp-block-button__link:not(.has-text-color), 
+body.aft-default-mode .is-style-fill a.wp-block-button__link:not(.has-text-color){
+    color: #fff;
+    background-color:#bb1919 ;
+    border: none;
 }
 
 /*----------===tag cloud===---------*/
@@ -6407,6 +6427,7 @@ body.aft-dark-mode .exclusive-posts .marquee a,
 body.aft-dark-mode article .aft-comment-view-share > span > a,
 body.aft-dark-mode .magnitude_tabbed_posts_widget .nav-tabs > li > a,
 body.aft-dark-mode #scroll-up,
+body.aft-dark-mode .wp-block-search__label,
 body.aft-dark-mode h1,
 body.aft-dark-mode h2,
 body.aft-dark-mode h3,
@@ -6487,28 +6508,26 @@ body.aft-dark-mode .color-pad .read-title h4 a{
     color: #fff;
 }
 
-body.aft-dark-mode .color-pad .entry-content > [class*="wp-block-"] a:not(.has-text-color),
+.aft-dark-mode .entry-content > [class*="wp-block-"] a:not(.has-text-color),
 body.aft-dark-mode .color-pad .entry-content > ul a, .entry-content > ul a:visited,
 body.aft-dark-mode .color-pad .entry-content > ol a, .entry-content > ol a:visited,
 body.aft-dark-mode .color-pad .entry-content > p a, .entry-content > p a:visited{
     color: #bb1919;
 }
 
-
-body.aft-dark-mode .color-pad .entry-content > [class*="wp-block-"] a:hover,
+.aft-dark-mode .entry-content > [class*="wp-block-"] a:hover,
 body.aft-dark-mode .color-pad .entry-content > ul a, 
 body.aft-dark-mode .color-pad .entry-content > ol a, 
 body.aft-dark-mode .color-pad .entry-content > p a{
-    /* border-bottom: 2px solid; */
-    /* padding-bottom: 2px; */
-    /* border-color: #bb1919; */
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 0.2em;
 }
 
-body.aft-dark-mode .main-navigation .menu .menu-mobile li .sub-menu{
+.aft-dark-mode .entry-content > [class*="wp-block-"] a.wp-block-button__link {
+    text-decoration: none;
 }
+
 body.aft-dark-mode .magnitude-header .top-header,
 body.aft-dark-mode .social-widget-menu ul li a, 
 body.aft-dark-mode .em-author-details ul li a{
