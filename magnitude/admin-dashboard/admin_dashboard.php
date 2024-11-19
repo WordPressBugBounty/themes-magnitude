@@ -161,8 +161,8 @@ if (!class_exists('AF_themes_info')) {
         'magnitude', // Parent slug.
         __('Upgrade', 'magnitude'), // Page title.
         '<span id="aft-upgrade-menu-item">' . __('Upgrade', 'magnitude') .'</span>', // Menu title.
-        capability: 'manage_options', // Capability.
-        menu_slug: esc_url('https://afthemes.com/products/magnitude-pro/') // Menu slug.
+        'manage_options', // Capability.
+        esc_url('https://afthemes.com/products/magnitude-pro/') // Menu slug.
         
       );
     }
