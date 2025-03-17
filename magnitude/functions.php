@@ -390,8 +390,8 @@ function print_pre($args)
 
 }
 
-add_action( 'init', 'magnitude_transltion_init');
+add_action( 'after_setup_theme', 'magnitude_transltion_init');
 
 function magnitude_transltion_init() {
-    load_theme_textdomain( 'magnitude', get_template_directory()  . '/languages' );
+    load_theme_textdomain( 'magnitude', false, get_template_directory()  . '/languages' );
 }
