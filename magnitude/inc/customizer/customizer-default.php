@@ -62,7 +62,7 @@ function magnitude_get_default_theme_options() {
 
     $defaults['show_main_news_section'] = 1;
 
-    $defaults['select_main_banner_layout_section_mode'] = 'wide';
+    $defaults['select_main_banner_layout_section_mode'] = 'boxed';
 
     $defaults['select_vertical_slider_news_category'] = 0;
     $defaults['vertical_slider_number_of_slides'] = 5;
